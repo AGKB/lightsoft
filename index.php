@@ -1,6 +1,7 @@
 <?php
 /**
- * User: Evgeniy Melnikov
+ *
+ * @author Evgeniy Melnikov
  */
 
 //------------Autoload classes-----------------------------
@@ -27,6 +28,7 @@ $productM = new Product('M', 100);
 //Create order
 $order = new Order();
 $order->addProduct($productA);
+$order->addProduct($productA);
 $order->addProduct($productB);
 $order->addProduct($productC);
 $order->addProduct($productD);
@@ -41,8 +43,13 @@ $order->addProduct($productE);
 $order->addProduct($productK);
 $order->addProduct($productL);
 $order->addProduct($productM);
+$order->addProduct($productD);
+$order->addProduct($productD);
+$order->addProduct($productE);
 
-//Create discount
+//Discount block
+
+//Discount by related products
 $discount1 = new Discount_ProductSet();
 $discount1->setProductSet($productA, $productB);
 $discount1->setDiscount(10);
@@ -55,6 +62,7 @@ $discount3 = new Discount_ProductSet();
 $discount3->setProductSet($productE, $productF, $productG);
 $discount3->setDiscount(5);
 
+//Discount by dependent
 $discount4 = new Discount_DependentProductSet();
 $discount4->setMainProduct($productA);
 $discount4->setDependentProduct($productK);
@@ -62,6 +70,7 @@ $discount4->setDependentProduct($productL);
 $discount4->setDependentProduct($productM);
 $discount4->setDiscount(5);
 
+//Discount by count
 $discount5 = new Discount_CountProductSet();
 $discount5->addExpectedProduct($productA);
 $discount5->addExpectedProduct($productC);
@@ -83,5 +92,5 @@ $calculator->setOrder($order);
 $calculator->setDiscountManager($discountManager);
 $amount = $calculator->doCalculation();
 
-
 echo "Total amount: " . $amount;
+

@@ -21,8 +21,13 @@ class Discount_ProductSet extends Discount
         $sum = 0;
         $productsOrder = &$this->order->products;
 
-        $discountProducts = array();
+        //For each pair go recursively
+        $sum = $this->doRecursive($productsOrder, $sum);
+        return $sum;
+    }
 
+    private  function doRecursive(&$productsOrder, $sum) {
+        $discountProducts = array();
         foreach($this->productsSet as $productSet) {
             foreach($productsOrder as &$productOrder) {
                 if($productOrder['product'] == $productSet && $productOrder['isDiscounted'] == 0) {
@@ -37,6 +42,7 @@ class Discount_ProductSet extends Discount
                 $discountProduct['isDiscounted'] = 1;
                 $sum += $discountProduct['product']->getPrice();
             }
+            return $this->doRecursive($productsOrder, $sum);
         }
         return $sum * $this->getDiscount();
     }
