@@ -1,10 +1,8 @@
 <?php
-/**
- * User: Evgeniy
- * Date: 16.06.14
- * Time: 12:12
- */
 
+/**
+ * Class Discount
+ */
 abstract class Discount
 {
     protected $discount = 1;

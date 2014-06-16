@@ -1,10 +1,9 @@
 <?php
-/**
- * User: Evgeniy
- * Date: 16.06.14
- * Time: 12:18
- */
 
+/**
+ *
+ * Class Discount_Manager
+ */
 class Discount_Manager
 {
     protected $discounts = array();

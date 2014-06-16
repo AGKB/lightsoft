@@ -1,17 +1,7 @@
 <?php
 /**
- * User: Evgeniy
- * Date: 16.06.14
- * Time: 12:14
+ * Class Discount_ProductSet
  */
-
-//////////////////////////////***************************************//////////////////////////////////////////////
-//////////////////////////////                                       //////////////////////////////////////////////
-//////////////////////////////            ДЛЯ КАЖДОЙ ПАРЫ            //////////////////////////////////////////////
-//////////////////////////////                                       //////////////////////////////////////////////
-//////////////////////////////***************************************//////////////////////////////////////////////
-
-
 class Discount_ProductSet extends Discount
 {
     protected $productsSet = array();
@@ -35,7 +25,7 @@ class Discount_ProductSet extends Discount
 
         foreach($this->productsSet as $productSet) {
             foreach($productsOrder as &$productOrder) {
-                if($productOrder['product'] == $productSet && $productOrder['isDiscounted'] == 0) {  //@TODO bool
+                if($productOrder['product'] == $productSet && $productOrder['isDiscounted'] == 0) {
                     $discountProducts[] = &$productOrder;
                     break;
                 }

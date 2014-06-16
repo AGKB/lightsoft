@@ -1,8 +1,6 @@
 <?php
 /**
- * User: Evgeniy
- * Date: 14.06.14
- * Time: 8:53
+ * User: Evgeniy Melnikov
  */
 
 //------------Autoload classes-----------------------------

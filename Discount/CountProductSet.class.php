@@ -1,10 +1,8 @@
 <?php
-/**
- * User: Evgeniy
- * Date: 16.06.14
- * Time: 12:17
- */
 
+/**
+ * Class Discount_CountProductSet
+ */
 class Discount_CountProductSet extends Discount
 {
     protected $discountRule = array();

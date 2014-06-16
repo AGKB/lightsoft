@@ -1,10 +1,8 @@
 <?php
-/**
- * User: Evgeniy
- * Date: 16.06.14
- * Time: 12:10
- */
 
+/**
+ * Class Order
+ */
 class Order
 {
     public $products = array();
@@ -13,7 +11,7 @@ class Order
     {
         $this->products[] = array(
             'product' => $product,
-            'isDiscounted' => 0,   //@TODO replace to bool
+            'isDiscounted' => 0,
         );
     }
 

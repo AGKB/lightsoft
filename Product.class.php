@@ -1,10 +1,8 @@
 <?php
-/**
- * User: Evgeniy
- * Date: 16.06.14
- * Time: 12:09
- */
 
+/**
+ * Class Product
+ */
 class Product
 {
     protected $name;

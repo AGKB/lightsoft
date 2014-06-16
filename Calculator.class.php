@@ -1,11 +1,9 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: evgeniy
- * Date: 16.06.14
- * Time: 12:20
- */
 
+/**
+ *
+ * Class Calculator
+ */
 class Calculator
 {
     protected $order;
