@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <title> joke by color </title>
+
+    <style>
+        table .c { color: red }
+        .a .c { color: green }
+    </style>
+    <script>
+        function changeColor()
+        {
+            var item = document.getElementsByClassName('c')[0];
+
+            if(confirm('The first method: Change color in class'))
+            {
+                first(item);
+            }
+
+            if(confirm('The second method: Set class of the parent element'))
+            {
+                second(item);
+            }
+
+            if(confirm('The third method: Create parent element with css style'))
+            {
+                third(item);
+            }
+        }
+
+        function first(item)
+        {
+            item.style.color = 'green';
+        }
+
+        function second(item)
+        {
+            item.parentNode.className='a';
+        }
+
+        function third(item)
+        {
+            var span = document.createElement('SPAN');
+            span.style = 'color: green';
+            span.innerHTML = item.innerHTML;
+            item.innerHTML = '';
+            item.appendChild(span);
+        }
+    </script>
+</head>
+
+<body onload="changeColor()">
+<table id='t'>
+    <tr>
+        <td class='c'>Текст</td>
+    </tr>
+</table>
+</body>
+</html>
