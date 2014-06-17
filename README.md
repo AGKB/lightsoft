@@ -1,3 +1,9 @@
+###Task1 JS/HTML/CSS
+
+Дано:
+> table .c { color: red }
+> .a .c { color: green }
+
 <div class="txt">
 <p id="docs-internal-guid-2b26888e-e06c-2822-41e9-90e3c0acbfd0" style="line-height:1.15;margin-top:0pt;margin-bottom:0pt;" dir="ltr"><span style="font-size:15px;font-family:Arial;color:#000000;background-color:transparent;font-weight:normal;font-style:normal;font-variant:normal;text-decoration:none;vertical-align:baseline;"><br>
   <b>Есть продукты A, B, C, D, E, F, G, H, I, J, K, L, M. Каждый продукт стоит определенную сумму.</b></span></p>
