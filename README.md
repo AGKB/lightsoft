@@ -1,8 +1,14 @@
-###Task1 JS/HTML/CSS
-
-Дано:
-> table .c { color: red }
+###task1 ####JS/HTML/CSS
+**Дано:**
+> table .c { color: red }<br>
 > .a .c { color: green }
+
+> <table id=”t”>
+>    <tr>
+>        <td class=”c”>Текст</td>
+>    </tr>
+> </table>
+
 
 <div class="txt">
 <p id="docs-internal-guid-2b26888e-e06c-2822-41e9-90e3c0acbfd0" style="line-height:1.15;margin-top:0pt;margin-bottom:0pt;" dir="ltr"><span style="font-size:15px;font-family:Arial;color:#000000;background-color:transparent;font-weight:normal;font-style:normal;font-variant:normal;text-decoration:none;vertical-align:baseline;"><br>
