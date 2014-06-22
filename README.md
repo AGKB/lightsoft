@@ -1,4 +1,3 @@
-See test tasks: http://job.lightsoft.ru/makeTest?key=f0d2a8e58dfe03b7c29c6c08a69b2ce9
 ###1) JS/HTML/CSS
 Дано:
     table .c { color: red }
@@ -93,7 +92,7 @@ $discountManager->add($discount1);
 $calculator = new Calculator();
 $calculator->setOrder( $productOrder );
 $calculator->setDiscountManager ($discountManager);
-print_r($calculator->doCalculation());
+print_r($calculator->doCalculation());  
 
 
 
