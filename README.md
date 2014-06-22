@@ -72,27 +72,23 @@
     $objectB = new Product('B', 100);
     // … остальные продукты
 
-// создаем объекты скидок и конфигурируем их связи с продуктами
-
+// создаем объекты скидок и конфигурируем их связи с продуктами  
     $discount1 = new Discount_ProductSet();
     $discount1->setProductSet($objectA, $objectB);
     $discount1->setDiscount(10);
     // … остальные скидки
 
-// формируем заказ в корзине
-
+// формируем заказ в корзине  
     $productOrder = new Order();
     $productOrder->push($objectA);
     $productOrder->push($objectA);
     $productOrder->push($objectB);
 
-// менеджер применения скидок. добавляем в него активные скидки
-
+// менеджер применения скидок. добавляем в него активные скидки  
     $discountManager = new Discount_Manager();
     $discountManager->add($discount1);
 
-// расчет цены. добавляем в него активные скидки и заказ, производим расчет
-
+// расчет цены. добавляем в него активные скидки и заказ, производим расчет  
     $calculator = new Calculator();
     $calculator->setOrder( $productOrder );
     $calculator->setDiscountManager ($discountManager);
