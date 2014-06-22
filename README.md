@@ -68,31 +68,36 @@
 Пример, как могло бы выглядеть в конечном виде использование кода (предложите свой вариант, данная декларация носит иллюстративный характер).
 
 // создаем объекты продуктов
-$objectA = new Product('A', 1000);
-$objectB = new Product('B', 100);
-// … остальные продукты
+
+    $objectA = new Product('A', 1000);
+    $objectB = new Product('B', 100);
+    // … остальные продукты
 
 // создаем объекты скидок и конфигурируем их связи с продуктами
-$discount1 = new Discount_ProductSet();
-$discount1->setProductSet($objectA, $objectB);
-$discount1->setDiscount(10);
-// … остальные скидки
+
+    $discount1 = new Discount_ProductSet();
+    $discount1->setProductSet($objectA, $objectB);
+    $discount1->setDiscount(10);
+    // … остальные скидки
 
 // формируем заказ в корзине
-$productOrder = new Order();
-$productOrder->push($objectA);
-$productOrder->push($objectA);
-$productOrder->push($objectB);
+
+    $productOrder = new Order();
+    $productOrder->push($objectA);
+    $productOrder->push($objectA);
+    $productOrder->push($objectB);
 
 // менеджер применения скидок. добавляем в него активные скидки
-$discountManager = new Discount_Manager();
-$discountManager->add($discount1);
+
+    $discountManager = new Discount_Manager();
+    $discountManager->add($discount1);
 
 // расчет цены. добавляем в него активные скидки и заказ, производим расчет
-$calculator = new Calculator();
-$calculator->setOrder( $productOrder );
-$calculator->setDiscountManager ($discountManager);
-print_r($calculator->doCalculation());  
+
+    $calculator = new Calculator();
+    $calculator->setOrder( $productOrder );
+    $calculator->setDiscountManager ($discountManager);
+    print_r($calculator->doCalculation());
 
 
 
